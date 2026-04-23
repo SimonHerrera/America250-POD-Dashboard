@@ -6,25 +6,26 @@
     <title>America 250 - POD Dashboard</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        h1 { color: #e94560; font-size: 2rem; margin-bottom: 10px; }
-        .subtitle { color: #888; margin-bottom: 30px; }
-        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; }
-        .stat-card { background: #16213e; padding: 20px; border-radius: 10px; text-align: center; }
-        .stat-value { font-size: 1.5rem; font-weight: bold; color: #e94560; }
-        .stat-label { color: #888; font-size: 0.8rem; margin-top: 5px; }
-        .section { background: #16213e; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
-        .section h2 { color: #e94560; margin-bottom: 15px; font-size: 1.2rem; }
-        .product { background: #0f3460; padding: 12px; border-radius: 8px; margin-bottom: 10px; }
-        .product-rank { color: #e94560; font-weight: bold; }
-        .product-name { font-size: 0.9rem; margin: 5px 0; }
-        .product-meta { font-size: 0.8rem; color: #888; }
-        .tags { display: flex; gap: 8px; flex-wrap: wrap; }
-        .tag { background: #e94560; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; padding: 15px; }
+        .container { max-width: 700px; margin: 0 auto; }
+        h1 { color: #e94560; font-size: 1.8rem; margin-bottom: 5px; }
+        .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 20px; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+        .stat-card { background: #16213e; padding: 12px 8px; border-radius: 8px; text-align: center; }
+        .stat-value { font-size: 1.1rem; font-weight: bold; color: #e94560; }
+        .stat-label { color: #888; font-size: 0.65rem; margin-top: 3px; }
+        .section { background: #16213e; border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .section h2 { color: #e94560; margin-bottom: 12px; font-size: 1.1rem; }
+        .product { background: #0f3460; padding: 10px; border-radius: 6px; margin-bottom: 8px; }
+        .product-rank { color: #e94560; font-weight: bold; font-size: 0.85rem; }
+        .product-name { font-size: 0.85rem; margin: 4px 0; line-height: 1.3; }
+        .product-link { color: #4ecca3; font-size: 0.8rem; text-decoration: none; display: inline-block; margin-top: 4px; }
+        .product-link:hover { text-decoration: underline; }
+        .product-meta { font-size: 0.75rem; color: #888; }
+        .tags { display: flex; gap: 6px; flex-wrap: wrap; }
+        .tag { background: #e94560; color: white; padding: 3px 8px; border-radius: 10px; font-size: 0.7rem; }
         .tag.digital { background: #4ecca3; }
         .tag.shirt { background: #0ea5e9; }
-        .notes textarea { width: 100%; background: #16213e; border: 1px solid #333; color: #eee; padding: 12px; border-radius: 8px; min-height: 100px; }
     </style>
 </head>
 <body>
@@ -40,35 +41,55 @@
         </div>
         
         <div class="section">
-            <h2>🏆 Top 10 Best Sellers</h2>
-            <div class="product"><span class="product-rank">#1</span> Coquette Patriotic Bow PNG - <strong>$3.96</strong> (38 sales, 152% conv)</div>
-            <div class="product"><span class="product-rank">#2</span> Preppy Crochet America 250th Art - <strong>$1.40</strong> (28 sales, 117% conv)</div>
-            <div class="product"><span class="product-rank">#3</span> USA 250th Anniversary Emblem - <strong>$13.50</strong> (35 sales, 97% conv)</div>
-            <div class="product"><span class="product-rank">#4</span> 250th Anniversary Digital Clipart - <strong>$5.99</strong> (42 sales, 67% conv)</div>
-            <div class="product"><span class="product-rank">#5</span> America 250 T-shirt Family - <strong>$20.00</strong> (48 sales, 59% conv)</div>
-            <div class="product"><span class="product-rank">#6</span> Custom Descendant of Patriot Shirt - <strong>$17.32</strong> (49 sales, 52% conv)</div>
-            <div class="product"><span class="product-rank">#7</span> 250th Anniversary Digital Clipart #2 - <strong>$5.99</strong> (48 sales, 37% conv)</div>
-            <div class="product"><span class="product-rank">#8</span> USA 250th Quarter Zip Sweatshirt - <strong>$34.99</strong> (33 sales, 30% conv)</div>
-            <div class="product"><span class="product-rank">#9</span> Mickey Mouse Patriotic PNG - <strong>$3.85</strong> (27 sales, 26% conv)</div>
-            <div class="product"><span class="product-rank">#10</span> 4th of July 250 Years PNG - <strong>$3.50</strong> (48 sales, 16% conv)</div>
+            <h2>👕 Top 15 Physical Items (Clothing)</h2>
+            <div class="product"><span class="product-rank">#1</span> USA 250th Anniversary Comfort Colors Shirt - <strong>$37.00</strong><br><span class="product-meta">164 sales | DDApparelUS</span><br><a class="product-link" href="https://www.etsy.com/listing/4441526534/usa-250th-anniversary-comfort-colors" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#2</span> 250 Years Of Freedom Shirt - <strong>$19.99</strong><br><span class="product-meta">107 sales | CrabTreeFamilyGifts</span><br><a class="product-link" href="https://www.etsy.com/listing/4462755423/250-years-of-freedom-shirt-usa" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#3</span> Embroidered 250th Anniversary USA Shirt - <strong>$56.00</strong><br><span class="product-meta">46 sales | JavonnDes88</span><br><a class="product-link" href="https://www.etsy.com/listing/4449062182/embroidered-250th-anniversary-usa-shirt" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#4</span> Comfort Colors USA 250 Year Of Freedom - <strong>$16.99</strong><br><span class="product-meta">137 sales | SaksukaApparel</span><br><a class="product-link" href="https://www.etsy.com/listing/4471928935/comfort-colors-usa-250-year-of-freedom" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#5</span> Comfort Colors USA 250th Birthday Shirt - <strong>$16.99</strong><br><span class="product-meta">119 sales | BestStopShirt</span><br><a class="product-link" href="https://www.etsy.com/listing/4476459875/comfort-colors-usa-250th-birthday-shirt" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#6</span> Embroidered USA 250th Sweatshirt - <strong>$21.99</strong><br><span class="product-meta">91 sales | MoriNoKoya</span><br><a class="product-link" href="https://www.etsy.com/listing/4445850212/embroidered-usa-250th-sweatshirt" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#7</span> America 250th Anniversary Shirt 1776-2026 - <strong>$35.00</strong><br><span class="product-meta">57 sales | SageDesignHaus</span><br><a class="product-link" href="https://www.etsy.com/listing/4436867098/america-250th-anniversary-shirt-1776" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#8</span> America 250th Anniversary Shirt - <strong>$18.99</strong><br><span class="product-meta">97 sales | SunriseMode</span><br><a class="product-link" href="https://www.etsy.com/listing/4451278169/america-250th-anniversary-shirt" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#9</span> America 250 Rhinestone Shirt - <strong>$33.50</strong><br><span class="product-meta">53 sales | SparkleNationDesign</span><br><a class="product-link" href="https://www.etsy.com/listing/4451273971/america-250-years-rhinestone-shirt-july" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#10</span> Comfort Colors Custom USA 250th Shirt - <strong>$16.99</strong><br><span class="product-meta">104 sales | GoldenAppleApparelUS</span><br><a class="product-link" href="https://www.etsy.com/listing/4469200572/comfort-colors-custom-usa-250th" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#11</span> USA 250th Embroidered Comfort Colors - <strong>$42.54</strong><br><span class="product-meta">34 sales | CozyAuraCraft</span><br><a class="product-link" href="https://www.etsy.com/listing/4453893165/usa-250-years-anniversary-embroidered" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#12</span> 250 Years of Freedom Eagle & Horse Tee - <strong>$20.00</strong><br><span class="product-meta">70 sales | NanaTsWorkshop</span><br><a class="product-link" href="https://www.etsy.com/listing/4456980693/250-years-of-freedom-shirt-patriotic" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#13</span> Comfort Colors Retro USA 250 - <strong>$27.00</strong><br><span class="product-meta">51 sales | KevsyCollections</span><br><a class="product-link" href="https://www.etsy.com/listing/4347486294/comfort-colors-retro-usa-250-shirt" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#14</span> 250 Years of Freedom V-Neck - <strong>$29.00</strong><br><span class="product-meta">41 sales | SplendidShirt</span><br><a class="product-link" href="https://www.etsy.com/listing/4464152149/250-years-of-freedom-v-neck-celebrate" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#15</span> One Nation Under God Shirt - <strong>$23.65</strong><br><span class="product-meta">49 sales | VnSilk</span><br><a class="product-link" href="https://www.etsy.com/listing/4433494233/one-nation-under-god-shirt-250-years" target="_blank">View on Etsy →</a></div>
+        </div>
+        
+        <div class="section">
+            <h2>📥 Top 15 Digital Downloads</h2>
+            <div class="product"><span class="product-rank">#1</span> Coquette Patriotic Bow PNG - <strong>$3.96</strong><br><span class="product-meta">38 sales | 152% conv | Counil</span><br><a class="product-link" href="https://www.etsy.com/listing/4473974049/coquette-patriotic-bow-png-faux" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#2</span> USA 250th Anniversary Emblem PNG - <strong>$13.50</strong><br><span class="product-meta">35 sales | 97% conv | NakamaArts</span><br><a class="product-link" href="https://www.etsy.com/listing/4452099506/250-years-usa-anniversary-emblem-liberty" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#3</span> USA 250th SVG PNG Bundle - <strong>$7.00</strong><br><span class="product-meta">53 sales | 7.6% conv | NoirNeonStudio</span><br><a class="product-link" href="https://www.etsy.com/listing/4460782413/usa-250th-anniversary-svg-png-bundle" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#4</span> 100 American Flag Clipart Bundle - <strong>$4.29</strong><br><span class="product-meta">83 sales | 15% conv | CrispCutArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4455353249/100-american-flag-clipart-bundle-grunge" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#5</span> 250th Anniversary Digital Clipart #1 - <strong>$5.99</strong><br><span class="product-meta">48 sales | 67% conv | PositeeDigitalArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4444008711/250th-anniversary-digital-clipart" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#6</span> USA 250th Anniversary PNG - <strong>$4.99</strong><br><span class="product-meta">52 sales | 2.7% conv | GuggadyDigitalArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4407153927/usa-250th-anniversary-png-1776-2026" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#7</span> 250th Anniversary Digital Clipart #2 - <strong>$5.99</strong><br><span class="product-meta">48 sales | 37% conv | PositeeDigitalArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4441952088/250th-anniversary-digital-clipart" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#8</span> 250th Anniversary Bundle PNG - <strong>$5.99</strong><br><span class="product-meta">41 sales | 11% conv | PositeeDigitalArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4444570987/250th-anniversary-4th-of-july-bundle-png" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#9</span> Retro USA 250th Mickey & Friends - <strong>$4.99</strong><br><span class="product-meta">48 sales | 15% conv | Orisdigital</span><br><a class="product-link" href="https://www.etsy.com/listing/4465211149/retro-usa-250th-anniversary-mickey" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#10</span> 250 Years Freedom Eagle Bootleg - <strong>$5.99</strong><br><span class="product-meta">35 sales | 6% conv | UNSDigitalArt</span><br><a class="product-link" href="https://www.etsy.com/listing/4437186813/250-years-of-freedom-eagle-bootleg-png" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#11</span> USA 250th Eagle PNG - <strong>$3.99</strong><br><span class="product-meta">46 sales | 9.4% conv | SAAHCREATLY</span><br><a class="product-link" href="https://www.etsy.com/listing/4462766396/usa-250th-anniversary-eagle-png-250" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#12</span> 4th of July 250 Years Defending Liberty - <strong>$3.50</strong><br><span class="product-meta">48 sales | 16% conv | NexvoStudio</span><br><a class="product-link" href="https://www.etsy.com/listing/4461611664/4th-of-july-250-years-defending-liberty" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#13</span> USA 250th PNG Bundle - <strong>$4.71</strong><br><span class="product-meta">27 sales | 3.7% conv | DigitalStudioDS</span><br><a class="product-link" href="https://www.etsy.com/listing/4445600902/250th-anniversary-usa-png-bundle-america" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#14</span> Retro USA 250 PNG Digital - <strong>$2.00</strong><br><span class="product-meta">38 sales | 5% conv | LushWardrobe81</span><br><a class="product-link" href="https://www.etsy.com/listing/4441919132/retro-usa-250-png-digital-download" target="_blank">View on Etsy →</a></div>
+            <div class="product"><span class="product-rank">#15</span> USA 250th Eagle PNG (Sublimation) - <strong>$4.00</strong><br><span class="product-meta">17 sales | 21% conv | ZyloZenStore</span><br><a class="product-link" href="https://www.etsy.com/listing/4470364673/usa-250th-anniversary-png-united-states" target="_blank">View on Etsy →</a></div>
         </div>
         
         <div class="section">
             <h2>💡 Top Niches</h2>
             <div class="tags">
-                <span class="tag digital">Digital Downloads</span>
                 <span class="tag shirt">Comfort Colors Shirts</span>
+                <span class="tag digital">Digital PNG/SVG</span>
                 <span class="tag">Coquette Patriotic</span>
                 <span class="tag">Eagle Emblems</span>
                 <span class="tag">Statue of Liberty</span>
                 <span class="tag">Disney/Mickey</span>
-                <span class="tag">DTF Transfers</span>
+                <span class="tag">Rhinestone/Bling</span>
+                <span class="tag">Embroidery</span>
             </div>
-        </div>
-        
-        <div class="section">
-            <h2>📝 Ideas</h2>
-            <textarea placeholder="Your product ideas here..."></textarea>
         </div>
     </div>
 </body>
