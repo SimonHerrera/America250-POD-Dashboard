@@ -6,68 +6,51 @@
     <title>America 250 - POD Dashboard</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        header { background: linear-gradient(135deg, #16213e, #0f3460); padding: 30px; border-radius: 12px; margin-bottom: 30px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #eee; min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
         h1 { color: #e94560; font-size: 2rem; margin-bottom: 10px; }
-        .subtitle { color: #888; }
-        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 30px; }
+        .subtitle { color: #888; margin-bottom: 30px; }
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 30px; }
         .stat-card { background: #16213e; padding: 20px; border-radius: 10px; text-align: center; }
-        .stat-value { font-size: 2rem; font-weight: bold; color: #e94560; }
-        .stat-label { color: #888; font-size: 0.9rem; margin-top: 5px; }
-        .section { background: #16213e; border-radius: 12px; padding: 25px; margin-bottom: 25px; }
-        .section h2 { color: #e94560; margin-bottom: 20px; font-size: 1.3rem; }
-        .products { display: grid; gap: 12px; }
-        .product { background: #0f3460; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; transition: transform 0.2s; }
-        .product:hover { transform: translateX(5px); }
-        .product-rank { font-size: 1.5rem; font-weight: bold; color: #e94560; width: 40px; }
-        .product-info { flex: 1; }
-        .product-name { font-weight: 600; margin-bottom: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 500px; }
-        .product-meta { font-size: 0.85rem; color: #888; }
-        .product-stats { text-align: right; }
-        .product-price { font-size: 1.2rem; font-weight: bold; color: #4ecca3; }
-        .product-sales { color: #888; font-size: 0.9rem; }
-        .product-conv { color: #ffd700; font-size: 0.9rem; }
-        .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
-        .tag { background: #e94560; color: white; padding: 4px 12px; border-radius: 15px; font-size: 0.8rem; }
+        .stat-value { font-size: 1.5rem; font-weight: bold; color: #e94560; }
+        .stat-label { color: #888; font-size: 0.8rem; margin-top: 5px; }
+        .section { background: #16213e; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        .section h2 { color: #e94560; margin-bottom: 15px; font-size: 1.2rem; }
+        .product { background: #0f3460; padding: 12px; border-radius: 8px; margin-bottom: 10px; }
+        .product-rank { color: #e94560; font-weight: bold; }
+        .product-name { font-size: 0.9rem; margin: 5px 0; }
+        .product-meta { font-size: 0.8rem; color: #888; }
+        .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { background: #e94560; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; }
         .tag.digital { background: #4ecca3; }
         .tag.shirt { background: #0ea5e9; }
-        .notes { background: #0f3460; padding: 20px; border-radius: 10px; }
-        .notes textarea { width: 100%; background: #16213e; border: 1px solid #333; color: #eee; padding: 15px; border-radius: 8px; min-height: 150px; font-family: inherit; resize: vertical; }
-        .btn { background: #e94560; color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-size: 1rem; margin-top: 10px; }
-        .btn:hover { background: #d63850; }
-        @media (max-width: 768px) { .product { flex-direction: column; align-items: flex-start; } .product-stats { text-align: left; margin-top: 10px; } }
+        .notes textarea { width: 100%; background: #16213e; border: 1px solid #333; color: #eee; padding: 12px; border-radius: 8px; min-height: 100px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>🇺🇸 America 250 - POD Dashboard</h1>
-            <p class="subtitle">Print-on-Demand Research for July 4th, 2026</p>
-        </header>
+        <h1>🇺🇸 America 250 - POD Dashboard</h1>
+        <p class="subtitle">Print-on-Demand Research for July 4th, 2026</p>
         
         <div class="stats">
-            <div class="stat-card">
-                <div class="stat-value">66</div>
-                <div class="stat-label">Top Sellers Analyzed</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">$1-57</div>
-                <div class="stat-label">Price Range</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">152%</div>
-                <div class="stat-label">Top Conversion</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">$35</div>
-                <div class="stat-label">Target Price</div>
-            </div>
+            <div class="stat-card"><div class="stat-value">66</div><div class="stat-label">Top Sellers</div></div>
+            <div class="stat-card"><div class="stat-value">$1-57</div><div class="stat-label">Price Range</div></div>
+            <div class="stat-card"><div class="stat-value">152%</div><div class="stat-label">Top Conv.</div></div>
+            <div class="stat-card"><div class="stat-value">$35</div><div class="stat-label">Target</div></div>
         </div>
         
         <div class="section">
             <h2>🏆 Top 10 Best Sellers</h2>
-            <div class="products" id="topProducts"></div>
+            <div class="product"><span class="product-rank">#1</span> Coquette Patriotic Bow PNG - <strong>$3.96</strong> (38 sales, 152% conv)</div>
+            <div class="product"><span class="product-rank">#2</span> Preppy Crochet America 250th Art - <strong>$1.40</strong> (28 sales, 117% conv)</div>
+            <div class="product"><span class="product-rank">#3</span> USA 250th Anniversary Emblem - <strong>$13.50</strong> (35 sales, 97% conv)</div>
+            <div class="product"><span class="product-rank">#4</span> 250th Anniversary Digital Clipart - <strong>$5.99</strong> (42 sales, 67% conv)</div>
+            <div class="product"><span class="product-rank">#5</span> America 250 T-shirt Family - <strong>$20.00</strong> (48 sales, 59% conv)</div>
+            <div class="product"><span class="product-rank">#6</span> Custom Descendant of Patriot Shirt - <strong>$17.32</strong> (49 sales, 52% conv)</div>
+            <div class="product"><span class="product-rank">#7</span> 250th Anniversary Digital Clipart #2 - <strong>$5.99</strong> (48 sales, 37% conv)</div>
+            <div class="product"><span class="product-rank">#8</span> USA 250th Quarter Zip Sweatshirt - <strong>$34.99</strong> (33 sales, 30% conv)</div>
+            <div class="product"><span class="product-rank">#9</span> Mickey Mouse Patriotic PNG - <strong>$3.85</strong> (27 sales, 26% conv)</div>
+            <div class="product"><span class="product-rank">#10</span> 4th of July 250 Years PNG - <strong>$3.50</strong> (48 sales, 16% conv)</div>
         </div>
         
         <div class="section">
@@ -84,59 +67,9 @@
         </div>
         
         <div class="section">
-            <h2>📝 My Product Ideas</h2>
-            <div class="notes">
-                <textarea id="notes" placeholder="Add your product ideas here...
-
-Example ideas:
-- Custom family shirt with names + 1776-2026
-- Bundle: Eagle PNG + Flag clipart + 250 logo
-- Coquette bow with stars/sparkles"></textarea>
-                <button class="btn" onclick="saveNotes()">Save Notes</button>
-            </div>
+            <h2>📝 Ideas</h2>
+            <textarea placeholder="Your product ideas here..."></textarea>
         </div>
     </div>
-    
-    <script>
-        const products = [
-            {rank:1,name:"Coquette Patriotic Bow PNG",price:"$3.96",sales:38,conv:"152%"},
-            {rank:2,name:"Preppy Crochet America 250th Art",price:"$1.40",sales:28,conv:"117%"},
-            {rank:3,name:"USA 250th Anniversary Emblem",price:"$13.50",sales:35,conv:"97%"},
-            {rank:4,name:"250th Anniversary Digital Clipart",price:"$5.99",sales:42,conv:"67%"},
-            {rank:5,name:"America 250 T-shirt Family Shirts",price:"$20.00",sales:48,conv:"59%"},
-            {rank:6,name:"Custom Descendant of Patriot Shirt",price:"$17.32",sales:49,conv:"52%"},
-            {rank:7,name:"250th Anniversary Digital Clipart #2",price:"$5.99",sales:48,conv:"37%"},
-            {rank:8,name:"USA 250th Quarter Zip Sweatshirt",price:"$34.99",sales:33,conv:"30%"},
-            {rank:9,name:"Mickey Mouse Patriotic PNG",price:"$3.85",sales:27,conv:"26%"},
-            {rank:10,name:"4th of July 250 Years PNG",price:"$3.50",sales:48,conv:"16%"},
-        ];
-        
-        const container = document.getElementById('topProducts');
-        products.forEach(p => {
-            container.innerHTML += `
-                <div class="product">
-                    <div class="product-rank">#${p.rank}</div>
-                    <div class="product-info">
-                        <div class="product-name">${p.name}</div>
-                        <div class="product-meta">Shop age: ${Math.floor(Math.random()*50)+2} months</div>
-                    </div>
-                    <div class="product-stats">
-                        <div class="product-price">${p.price}</div>
-                        <div class="product-sales">${p.sales} sales</div>
-                        <div class="product-conv">${p.conv} conv</div>
-                    </div>
-                </div>
-            `;
-        });
-        
-        function saveNotes() {
-            const notes = document.getElementById('notes').value;
-            localStorage.setItem('pod-notes', notes);
-            alert('Notes saved!');
-        }
-        
-        const saved = localStorage.getItem('pod-notes');
-        if (saved) document.getElementById('notes').value = saved;
-    </script>
 </body>
 </html>
